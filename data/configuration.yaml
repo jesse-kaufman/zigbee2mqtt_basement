@@ -1,0 +1,111 @@
+homeassistant: true
+advanced:
+  network_key:
+    - 112
+    - 182
+    - 199
+    - 144
+    - 0
+    - 115
+    - 117
+    - 96
+    - 131
+    - 157
+    - 101
+    - 136
+    - 15
+    - 197
+    - 250
+    - 122
+  pan_id: 49273
+  ext_pan_id:
+    - 214
+    - 178
+    - 126
+    - 5
+    - 128
+    - 42
+    - 128
+    - 228
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+  log_symlink_current: true
+  log_syslog:
+    app_name: Zigbee2MQTT_basement
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 514
+    protocol: udp4
+    type: "5424"
+  transmit_power: 9
+  adapter_concurrent: 16
+  channel: 20
+  last_seen: ISO_8601_local
+mqtt:
+  base_topic: zigbee2mqtt_basement
+  server: mqtt://192.168.0.12
+  user: mqtt-user
+  password: VKNKv85;]y4[XUgG
+  keepalive: 60
+  reject_unauthorized: true
+  version: 5
+  include_device_information: false
+serial:
+  port: /dev/ttyACM0
+frontend:
+  port: 8080
+device_options:
+  legacy: false
+devices:
+  "0x282c02bfffeb2d1d":
+    friendly_name: Basement-Desk-Outlet
+    homeassistant:
+      name: Basement Desk Outlet
+    legacy: false
+    optimistic: true
+    retain: true
+    retention: 30
+    qos: 2
+  "0xb0ce18140017d22d":
+    friendly_name: Basement-Room-Light
+    homeassistant:
+      name: Basement Room Light
+    legacy: false
+    optimistic: true
+    retain: true
+    retention: 30
+    qos: 2
+    transition: 1
+    color_sync: true
+    state_action: false
+  "0x000d6f0010597b95":
+    friendly_name: Basement-Room-Door
+    homeassistant:
+      name: Basement Room Door
+    legacy: false
+    optimistic: true
+    retain: true
+    retention: 30
+    qos: 2
+  "0x282c02bfffe81b91":
+    friendly_name: Basement-Motion-Sensor
+    homeassistant:
+      name: Basement Motion Sensor
+    legacy: false
+    optimistic: true
+    qos: 2
+    retain: true
+    retention: 30
+  "0x00158d0009413e97":
+    friendly_name: Basement-Multi-sensor
+    homeassistant:
+      name: Basement Multi-sensor
+    legacy: false
+    optimistic: true
+    qos: 2
+    retain: true
+    retention: 30

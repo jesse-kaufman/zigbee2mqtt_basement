@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+docker run \
+    --name zigbee2mqtt_basement \
+    --restart=unless-stopped \
+    --device=/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0:/dev/ttyACM0 \
+    -p 8081:8080 \
+    -v ./data:/app/data \
+    -v /run/udev:/run/udev:ro \
+    -e TZ=America/Chicago \
+    -d \
+    koenkk/zigbee2mqtt
