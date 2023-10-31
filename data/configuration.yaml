@@ -31,6 +31,8 @@ advanced:
   legacy_api: false
   legacy_availability_payload: false
   log_symlink_current: true
+  log_output:
+    - console
   log_syslog:
     app_name: Zigbee2MQTT_basement
     eol: /n
