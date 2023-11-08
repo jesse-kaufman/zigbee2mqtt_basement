@@ -49,9 +49,9 @@ advanced:
   last_seen: ISO_8601_local
 mqtt:
   base_topic: zigbee2mqtt_basement
-  server: mqtt://192.168.0.12
+  server: mqtt://mqtt.home
   user: mqtt-user
-  password: VKNKv85;]y4[XUgG
+  password: '!secret.yaml password'
   keepalive: 60
   reject_unauthorized: true
   version: 5
@@ -59,7 +59,7 @@ mqtt:
 serial:
   port: /dev/ttyACM0
 frontend:
-  port: 8080
+  port: 80
 device_options:
   legacy: false
 devices:

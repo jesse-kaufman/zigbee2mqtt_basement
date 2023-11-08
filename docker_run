@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 docker run \
-    --name zigbee2mqtt_basement \
+    --name z2m-basement \
+    --network slacknet-0 \
+    --ip=192.168.0.16 \
+    --dns=192.168.0.13 \
     --restart=unless-stopped \
-    --device=/dev/serial/by-id/usb-Silicon_Labs_Sonoff_Zigbee_3.0_USB_Dongle_Plus_0001-if00-port0:/dev/ttyACM0 \
-    -p 8081:8080 \
+    --device=$(readlink -f dev):/dev/ttyACM0 \
     -v ./data:/app/data \
     -v /run/udev:/run/udev:ro \
     -e TZ=America/Chicago \
